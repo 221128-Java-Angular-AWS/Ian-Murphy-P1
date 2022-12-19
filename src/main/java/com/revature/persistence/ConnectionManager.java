@@ -1,4 +1,4 @@
-package revature.persistence;
+package com.revature.persistence;
 
 import java.io.IOException;
 import java.io.InputStream;

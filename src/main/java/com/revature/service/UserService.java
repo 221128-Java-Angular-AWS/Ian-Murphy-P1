@@ -1,4 +1,4 @@
-package revature.service;
+package com.revature.service;
 
 import com.revature.exceptions.PasswordIncorrectException;
 import com.revature.exceptions.UserNotFoundException;

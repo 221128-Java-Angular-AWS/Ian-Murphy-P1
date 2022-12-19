@@ -1,4 +1,4 @@
-package revature.persistence;
+package com.revature.persistence;
 
 import com.revature.exceptions.PasswordIncorrectException;
 import com.revature.exceptions.UserNotFoundException;
@@ -20,10 +20,8 @@ public class UserDao {
         try {
             String sql = "INSERT INTO users (first_name, last_name, username, password) VALUES (?, ?, ?, ?)";
             PreparedStatement pstmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            pstmt.setString(1, user.getFirstName());
-            pstmt.setString(2, user.getLastName());
-            pstmt.setString(3, user.getUsername());
-            pstmt.setString(4, user.getPassword());
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getPassword());
 
             pstmt.executeUpdate();
             ResultSet rs = pstmt.getGeneratedKeys();
@@ -51,8 +49,7 @@ public class UserDao {
                 throw new UserNotFoundException("This username was not found");
             }
 
-            User user = new User(rs.getInt("user_id"), rs.getString("first_name"),
-                    rs.getString("last_name"), rs.getString("username"), rs.getString("password"));
+            User user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"));
 
             if(user.getPassword().equals(password)) {
                 return user;
@@ -74,8 +71,7 @@ public class UserDao {
             ResultSet rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                user = new User(rs.getInt("user_id"), rs.getString("first_name"),
-                        rs.getString("last_name"), rs.getString("username"), rs.getString("password"));
+                user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"));
             }
 
         } catch (SQLException e) {
@@ -94,8 +90,6 @@ public class UserDao {
 
             while(rs.next()) {
                 results.add( new User(rs.getInt("user_id"),
-                        rs.getString("first_name"),
-                        rs.getString("last_name"),
                         rs.getString("username"),
                         rs.getString("password")));
             }
@@ -116,10 +110,8 @@ public class UserDao {
         try {
             String sql = "UPDATE users SET first_name = ?, last_name = ?, username = ?, password = ? WHERE user_id = ?";
             PreparedStatement pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, user.getFirstName());
-            pstmt.setString(2, user.getLastName());
-            pstmt.setString(3, user.getUsername());
-            pstmt.setString(4, user.getPassword());
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getPassword());
             pstmt.setInt(5, user.getUserId());
 
             pstmt.executeUpdate();

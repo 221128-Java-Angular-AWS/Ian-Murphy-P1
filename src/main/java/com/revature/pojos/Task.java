@@ -1,4 +1,4 @@
-package revature.pojos;
+package com.revature.pojos;
 
 import java.util.Objects;
 

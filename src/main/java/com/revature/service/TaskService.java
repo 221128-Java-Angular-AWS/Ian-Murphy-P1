@@ -1,4 +1,4 @@
-package revature.service;
+package com.revature.service;
 
 import com.revature.persistence.TaskDao;
 import com.revature.pojos.Task;

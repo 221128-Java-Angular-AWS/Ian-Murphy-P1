@@ -1,4 +1,4 @@
-package revature.servlet;
+package com.revature.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

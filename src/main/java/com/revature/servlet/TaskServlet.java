@@ -1,4 +1,4 @@
-package revature.servlet;
+package com.revature.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.persistence.TaskDao;

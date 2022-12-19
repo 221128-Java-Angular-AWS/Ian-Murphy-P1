@@ -13,12 +13,12 @@
 
 
     <listener>
-        <listener-class>com.revature.servlet.DependencyLoaderListener</listener-class>
+        <listener-class>com.com.revature.servlet.DependencyLoaderListener</listener-class>
     </listener>
 
     <servlet>
         <servlet-name>pingServlet</servlet-name>
-        <servlet-class>com.revature.servlet.PingServlet</servlet-class>
+        <servlet-class>com.com.revature.servlet.PingServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -29,7 +29,7 @@
 
     <servlet>
         <servlet-name>userServlet</servlet-name>
-        <servlet-class>com.revature.servlet.UserServlet</servlet-class>
+        <servlet-class>com.com.revature.servlet.UserServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -39,7 +39,7 @@
 
     <servlet>
         <servlet-name>authenticationServlet</servlet-name>
-        <servlet-class>com.revature.servlet.AuthenticationServlet</servlet-class>
+        <servlet-class>com.com.revature.servlet.AuthenticationServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

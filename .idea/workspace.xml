@@ -5,28 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33bb0374-4b48-4b11-866e-9c25ff22ae94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/table script.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/exceptions/PasswordIncorrectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/persistence/ConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/persistence/TaskDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/persistence/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/pojos/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/pojos/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/servlet/AuthenticationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/servlet/DependencyLoaderListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/servlet/PingServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/servlet/TaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/revature/servlet/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/exceptions/PasswordIncorrectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/PasswordIncorrectException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/exceptions/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TaskDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/pojos/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/AuthenticationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/DependencyLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/DependencyLoaderListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/PingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/PingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TaskServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +29,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +54,8 @@
     "last_opened_file_path": "C:/Users/murph/Downloads/Ian-Murphy-P1",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,6 +64,31 @@
       <recent name="C:\Users\murph\Downloads\Ian-Murphy-P1\src\main" />
       <recent name="C:\Users\murph\Downloads\Ian-Murphy-P1\src\main\java" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="P1test" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/Ian-Murphy-P1" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/8.5.84" />
+          <option name="path" value="$PROJECT_DIR$/../../../../Apache/apache-tomcat-8.5.84" />
+          <option name="version" value="8.5.84.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,5 +111,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
