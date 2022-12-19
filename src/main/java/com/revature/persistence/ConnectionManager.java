@@ -22,7 +22,6 @@ public class ConnectionManager {
      */
 
     private ConnectionManager() {
-
     }
 
     public static Connection getConnection() {

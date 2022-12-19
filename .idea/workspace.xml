@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33bb0374-4b48-4b11-866e-9c25ff22ae94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/TicketException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/UserExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/table script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/table script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TicketDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TicketServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/servlet/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/AuthenticationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

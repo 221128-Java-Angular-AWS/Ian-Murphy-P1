@@ -60,7 +60,7 @@ public class TicketDao {
         return ticket;
     }
 
-    //Completion Checklist: Employees can see a list of their previous submissions:
+    //Completion Checklist #8: Employees can see a list of their previous submissions:
     public Set<Ticket> getAllTicketsForUser(Integer userId) {
         Set<Ticket> tickets = new HashSet<>();
         try {
@@ -115,6 +115,15 @@ public class TicketDao {
             e.printStackTrace();
         }
     }
-    //Employees can see a list of their previous submissions
 
 }
+
+// TODO:
+
+// Method using enum to set ticket status
+
+// Method for managers to approve/deny tickets
+
+// Method for managers to view all pending tickets
+
+// Update method for employees to view past tickets using cookies to get id

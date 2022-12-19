@@ -1,6 +1,7 @@
 package com.revature.persistence;
 
 import com.revature.exceptions.PasswordIncorrectException;
+import com.revature.exceptions.UserExistsException;
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.pojos.User;
 
@@ -16,12 +17,13 @@ public class UserDao {
     }
 
     //Completion Checklist #2: Can register a new account with username and password
-    public void create(User user) {
+    public void create(User user) throws UserExistsException {
         try {
-            String sql = "INSERT INTO users (first_name, last_name, username, password, user_type) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO users (username, password, user_type) VALUES (?, ?, ?)";
             PreparedStatement pstmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, user.getUsername());
             pstmt.setString(2, user.getPassword());
+            pstmt.setString(3, user.getUserType());
 
             pstmt.executeUpdate();
             ResultSet rs = pstmt.getGeneratedKeys();
@@ -31,7 +33,7 @@ public class UserDao {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new UserExistsException("User already exists");
         }
     }
 

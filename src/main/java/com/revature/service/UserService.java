@@ -1,6 +1,7 @@
 package com.revature.service;
 
 import com.revature.exceptions.PasswordIncorrectException;
+import com.revature.exceptions.UserExistsException;
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.persistence.UserDao;
 import com.revature.pojos.User;
@@ -18,7 +19,7 @@ public class UserService {
         this.dao = dao;
     }
 
-    public void registerNewUser(User user) {
+    public void registerNewUser(User user) throws UserExistsException {
 
         dao.create(user);
     }

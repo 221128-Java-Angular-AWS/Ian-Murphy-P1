@@ -2,6 +2,7 @@ package com.revature.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.exceptions.PasswordIncorrectException;
+import com.revature.exceptions.UserExistsException;
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.persistence.UserDao;
 import com.revature.pojos.User;
@@ -32,6 +33,7 @@ public class AuthenticationServlet extends HttpServlet {
             resp.setStatus(200);
             resp.getWriter().println(mapper.writeValueAsString(authenticatedUser));
             Cookie authCookie = new Cookie("userId", user.getUserId().toString());
+            Cookie authCookie2 = new Cookie("userType", user.getUserType().toString());
 
         } catch(UserNotFoundException e) {
             resp.getWriter().print("Username not recognized");

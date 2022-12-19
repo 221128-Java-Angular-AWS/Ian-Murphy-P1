@@ -1,6 +1,7 @@
 package com.revature.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.exceptions.UserExistsException;
 import com.revature.persistence.UserDao;
 import com.revature.pojos.User;
 import com.revature.service.UserService;
@@ -36,21 +37,28 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //next we want to try to pull information out of the request object.
         //let's get the JSON body and map it into an object, then persist that into the database
+        try {
+            StringBuilder jsonBuilder = new StringBuilder();
+            BufferedReader reader = req.getReader();
 
-        StringBuilder jsonBuilder = new StringBuilder();
-        BufferedReader reader = req.getReader();
+            while (reader.ready()) {
+                jsonBuilder.append(reader.readLine());
+            }
 
-        while(reader.ready()) {
-            jsonBuilder.append(reader.readLine());
+            System.out.println("JSON string: " + jsonBuilder.toString());
+            User user = mapper.readValue(jsonBuilder.toString(), User.class);
+
+            service.registerNewUser(user);
+
+
+            System.out.println(user);
+
+            resp.setStatus(201);
+
+        } catch (UserExistsException e) {
+            resp.getWriter().print("User already exists");
+            resp.setStatus(400);
         }
-
-        System.out.println("JSON string: " + jsonBuilder.toString());
-        User user = mapper.readValue(jsonBuilder.toString(), User.class);
-        service.registerNewUser(user);
-
-        System.out.println(user);
-
-        resp.setStatus(201);
     }
 
     @Override
