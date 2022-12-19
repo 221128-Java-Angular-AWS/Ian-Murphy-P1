@@ -5,27 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33bb0374-4b48-4b11-866e-9c25ff22ae94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/TicketException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/UserExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/exceptions/PasswordIncorrectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/PasswordIncorrectException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/exceptions/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/ConnectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TaskDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/pojos/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/AuthenticationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/DependencyLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/DependencyLoaderListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/PingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/PingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TaskServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/revature/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/TicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/persistence/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/pojos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/servlet/TicketServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,9 +57,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/murph/Downloads/Ian-Murphy-P1",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">

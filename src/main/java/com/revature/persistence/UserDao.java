@@ -8,7 +8,6 @@ import java.sql.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class UserDao {
     private Connection connection;
 
@@ -16,9 +15,10 @@ public class UserDao {
         this.connection = ConnectionManager.getConnection();
     }
 
+    //Completion Checklist #2: Can register a new account with username and password
     public void create(User user) {
         try {
-            String sql = "INSERT INTO users (first_name, last_name, username, password) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO users (first_name, last_name, username, password, user_type) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement pstmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, user.getUsername());
             pstmt.setString(2, user.getPassword());
@@ -49,7 +49,7 @@ public class UserDao {
                 throw new UserNotFoundException("This username was not found");
             }
 
-            User user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"));
+            User user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"), rs.getString("user_type"));
 
             if(user.getPassword().equals(password)) {
                 return user;
@@ -71,7 +71,7 @@ public class UserDao {
             ResultSet rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"));
+                user = new User(rs.getInt("user_id"), rs.getString("username"), rs.getString("password"), rs.getString("user_type"));
             }
 
         } catch (SQLException e) {
@@ -91,7 +91,8 @@ public class UserDao {
             while(rs.next()) {
                 results.add( new User(rs.getInt("user_id"),
                         rs.getString("username"),
-                        rs.getString("password")));
+                        rs.getString("password"),
+                        rs.getString("user_type")));
             }
 
         } catch (SQLException e) {
@@ -99,10 +100,6 @@ public class UserDao {
         }
         return results;
     }
-
-
-
-
 
 
 
@@ -134,6 +131,4 @@ public class UserDao {
             throw new RuntimeException(e);
         }
     }
-
-
 }
