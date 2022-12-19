@@ -3,6 +3,7 @@ package com.revature.service;
 import com.revature.persistence.TicketDao;
 import com.revature.pojos.Ticket;
 
+import java.sql.SQLException;
 import java.util.Set;
 
 public class TicketService {
@@ -13,7 +14,7 @@ public class TicketService {
         this.dao = dao;
     }
 
-    public void createNewTicket(Ticket ticket) {
+    public void createNewTicket(Ticket ticket) throws SQLException {
         dao.create(ticket);
     }
 

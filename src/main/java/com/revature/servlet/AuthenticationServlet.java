@@ -7,6 +7,7 @@ import com.revature.exceptions.UserNotFoundException;
 import com.revature.persistence.UserDao;
 import com.revature.pojos.User;
 import com.revature.service.UserService;
+import com.revature.util.CookieUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -32,17 +33,31 @@ public class AuthenticationServlet extends HttpServlet {
             User authenticatedUser = service.authenticateUser(user);
             resp.setStatus(200);
             resp.getWriter().println(mapper.writeValueAsString(authenticatedUser));
-            Cookie authCookie = new Cookie("userId", user.getUserId().toString());
-            Cookie authCookie2 = new Cookie("userType", user.getUserType().toString());
-
+            Cookie authCookie = new Cookie(CookieUtil.USER_ID_COOKIE, authenticatedUser.getUserId().toString());
+            Cookie authCookie2 = new Cookie(CookieUtil.USER_TYPE_COOKIE, authenticatedUser.getUserType().toString());
+            authCookie.setPath("/");
+            authCookie2.setPath("/");
+            resp.addCookie(authCookie);
+            resp.addCookie(authCookie2);
         } catch(UserNotFoundException e) {
             resp.getWriter().print("Username not recognized");
             resp.setStatus(401);
+            removeCookies(resp);
         } catch(PasswordIncorrectException e) {
             resp.getWriter().print("Wrong password");
             resp.setStatus(401);
+            removeCookies(resp);
         }
 
+    }
+
+    private void removeCookies(HttpServletResponse resp) {
+        Cookie authCookie = new Cookie(CookieUtil.USER_ID_COOKIE, "");
+        authCookie.setMaxAge(0);
+        Cookie authCookie2 = new Cookie(CookieUtil.USER_TYPE_COOKIE, "");
+        authCookie2.setMaxAge(0);
+        resp.addCookie(authCookie);
+        resp.addCookie(authCookie2);
     }
 
 }

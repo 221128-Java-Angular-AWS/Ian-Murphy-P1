@@ -17,16 +17,14 @@ public class TicketDao {
     }
 
     //Completion Checklist: Can submit new reimbursement tickets
-    public void create(Ticket ticket) {
+    public void create(Ticket ticket) throws SQLException {
         try {
-            String sql = "INSERT INTO tickets (type, description, status, user_id, ticket_id, amount) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO tickets (description, status, user_id, amount) VALUES (?, ?, ?, ?)";
             PreparedStatement pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, ticket.getType());
-            pstmt.setString(2, ticket.getDescription());
-            pstmt.setString(3, ticket.getStatus());
-            pstmt.setInt(4, ticket.getUserId());
-            pstmt.setInt(5, ticket.getTicketId());
-            pstmt.setInt(6, ticket.getAmount());
+            pstmt.setString(1, ticket.getDescription());
+            pstmt.setString(2, ticket.getStatus());
+            pstmt.setInt(3, ticket.getUserId());
+            pstmt.setInt(4, ticket.getAmount());
 
             pstmt.executeUpdate();
 
@@ -46,7 +44,6 @@ public class TicketDao {
 
             while(rs.next()) {
                 ticket.setTicketId(rs.getInt("ticket_id"));
-                ticket.setType(rs.getString("type"));
                 ticket.setDescription(rs.getString("description"));
                 ticket.setStatus(rs.getString("status"));
                 ticket.setUserId(rs.getInt("user_id"));
@@ -71,12 +68,11 @@ public class TicketDao {
 
 
             while(rs.next()) {
-                tickets.add(new Ticket(rs.getInt("user_id"),
-                        rs.getString("type"),
+                tickets.add(new Ticket(rs.getInt("ticket_id"),
                         rs.getString("description"),
+                        rs.getInt("amount"),
                         rs.getString("status"),
-                        rs.getInt("user_id"),
-                        rs.getInt("amount")));
+                        rs.getInt("user_id")));
             }
 
         } catch(SQLException e) {
@@ -89,12 +85,11 @@ public class TicketDao {
         try {
             String sql = "UPDATE tickets SET type = ?, description = ?, status = ?, user_id = ?, ticket_id =?, amount = ?";
             PreparedStatement pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, ticket.getType());
-            pstmt.setString(2, ticket.getDescription());
-            pstmt.setString(3, ticket.getStatus());
-            pstmt.setInt(4, ticket.getUserId());
-            pstmt.setInt(5, ticket.getTicketId());
-            pstmt.setInt(6, ticket.getAmount());
+            pstmt.setString(1, ticket.getDescription());
+            pstmt.setString(2, ticket.getStatus());
+            pstmt.setInt(3, ticket.getUserId());
+            pstmt.setInt(4, ticket.getTicketId());
+            pstmt.setInt(5, ticket.getAmount());
 
             pstmt.executeUpdate();
 

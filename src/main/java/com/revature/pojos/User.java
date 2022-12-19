@@ -3,6 +3,9 @@ package com.revature.pojos;
 import java.util.Objects;
 
 public class User {
+
+    public static final String EMPLOYEE = "EMPLOYEE";
+    public static final String MANAGER = "MANAGER";
     private String userType;
     private Integer userId;
     private String username;

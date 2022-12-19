@@ -5,11 +5,11 @@ CREATE TABLE users (
 	user_type VARCHAR(200)
 );
 
-CREATE TABLE tasks (
+CREATE TABLE tickets (
 	ticket_id SERIAL PRIMARY KEY,
-	ticket_type VARCHAR(200),
-	description VARCHAR(8000),
-	status VARCHAR(200),
+	description VARCHAR(8000) NOT NULL,
+	amount INT NOT NULL,
+	status VARCHAR(200) NOT NULL,
 	user_id INT,
 	CONSTRAINT fk_tasks_users FOREIGN KEY (user_id) REFERENCES users (user_id)
 );

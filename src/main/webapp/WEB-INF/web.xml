@@ -38,6 +38,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>ticketServlet</servlet-name>
+        <servlet-class>com.revature.servlet.TicketServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ticketServlet</servlet-name>
+        <url-pattern>/tickets</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>authenticationServlet</servlet-name>
         <servlet-class>com.revature.servlet.AuthenticationServlet</servlet-class>
     </servlet>

@@ -3,23 +3,25 @@ package com.revature.pojos;
 import java.util.Objects;
 
 public class Ticket {
+
+    public static final String PENDING = "PENDING";
+    public static final String APPROVED = "APPROVED";
+    public static final String DENIED = "DENIED";
     private Integer ticketId;
-    private String type;
     private String description;
+    private Integer amount;
     private String status;
     private Integer userId;
-    private Integer amount;
 
     public Ticket() {
     }
 
-    public Ticket(Integer ticketId, String type, String description, String status, Integer userId, Integer amount) {
+    public Ticket(Integer ticketId, String description, Integer amount, String status, Integer userId) {
         this.ticketId = ticketId;
-        this.type = type;
         this.description = description;
+        this.amount = amount;
         this.status = status;
         this.userId = userId;
-        this.amount = amount;
     }
 
     public Integer getTicketId() {
@@ -27,12 +29,6 @@ public class Ticket {
     }
     public void setTicketId(Integer ticketId) {
         this.ticketId = ticketId;
-    }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
     public String getDescription() {
         return description;
@@ -55,7 +51,7 @@ public class Ticket {
     public Integer getAmount() {
         return amount;
     }
-    public void setAmount(Integer userId) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 
@@ -64,19 +60,18 @@ public class Ticket {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ticket ticket = (Ticket) o;
-        return Objects.equals(ticketId, ticket.ticketId) && Objects.equals(type, ticket.type) && Objects.equals(description, ticket.description) && Objects.equals(status, ticket.status) && Objects.equals(amount, ticket.amount) && Objects.equals(ticketId, ticket.ticketId);
+        return Objects.equals(ticketId, ticket.ticketId) && Objects.equals(description, ticket.description) && Objects.equals(status, ticket.status) && Objects.equals(amount, ticket.amount) && Objects.equals(ticketId, ticket.ticketId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ticketId, type, description, status, userId, amount);
+        return Objects.hash(ticketId, description, amount, status, userId);
     }
 
     @Override
     public String toString() {
         return "Ticket{" +
                 "ticketId=" + ticketId +
-                ", type='" + type + '\'' +
                 ", description='" + description + '\'' +
                 ", status=" + status +
                 ", userId=" + userId +
